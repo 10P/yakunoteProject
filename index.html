@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>yakunote</title>
+    <link rel="icon" 
+              type="image/png" 
+              href="../img/favicon01.png">
+</head>
+    
+<body>
+    
+    <span id="top" href="#top"></span>
+    
+    <a class="punch-link" href="../index.html">back to punch</a>
+    <!--
+    <nav>
+        <ul>
+            <li><a href="../index.html">back to punch</a></li>
+        </ul>
+    </nav>
+    -->
+    
+    
+    <div id="banner" align="center">
+        <h1>yakunote</h1>
+    </div>
+    
+    <div class="bar" align="center">
+        <a class="show-about">about</a>
+    </div>
+    
+    <div class="about" align="center">
+        <p> Japanese to English translation attempts will be posted here.</p>
+        <p> Note: the keyword is "attempts".</p>
+        <p>"Keep practicin', it'll do ya good."</p>
+    </div>
+    
+    
+    <div class="entry">
+        <div class="wrapper">
+            <div class="inner">
+                <br>
+                <br>
+                <br>
+                <div class="p-head">
+                    <span class="p-title">Howdy</span>
+                    <span class="p-date">2014.5.6</span>
+                </div>
+                <div class="p-head"></div>
+                <hr>
+                <br>
+                <hr>
+                <section class="jp-note">
+                    <p>翻訳を練習しなければいけません。</p><hr><br>        
+                </section>
+
+                <div class="options">
+                    <a class="up-down" id="show">Show Translation</a>
+                    <hr>
+                    <br>
+                </div>
+                
+                 <div class="to-up">
+                    <hr>
+                    <a class="scroll-up">to top</a>
+                </div>
+
+                <section class="en-note">
+                    <hr>
+                    <p>I have to practice translating.</p>
+                    <hr>
+                    <br>
+                </section>
+            </div>    
+
+        </div>
+    </div>  
+    
+
+
+<link rel="stylesheet" href="css/styles.css">
+<script type="text/javascript" src="js/cufon-yui.js"></script>    
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/pmdialog2_400.font.js"></script>
+<script type="text/javascript" src="../js/Mosamosa_500.font.js"></script>
+<script type="text/javascript">
+    Cufon.replace('.scroll-up, #banner h1, .bar a, .p-title, .about p, .p-date',{fontFamily:'pmdialog2'});
+    Cufon.replace('.punch-link', {fontFamily:'Mosamosa'});
+</script>    
+<script type="text/javascript">
+    
+    
+    // translation reveal toggle
+    $(document).ready(function(){
+        
+        $(".en-note").hide();
+        $(".up-down").show();
+        
+        $(".up-down").toggle(function(){
+            $(this).parent().siblings(".en-note").slideDown(
+                function(){
+                    $(this).siblings(".options").children("#show").text("Hide Translation");
+                }
+            );
+            
+         },function(){
+             $(".en-note").slideUp(
+                 function(){
+                     $(this).siblings(".options").children("#show").text("Show Translation");
+                 }
+             );
+         }
+        );
+    });
+    
+    // about section reveal
+    $(document).ready(function(){
+        
+        $(".about").hide();
+        $(".show-about").show();
+        
+        $(".show-about").toggle(function(){
+            $(".about").slideDown();
+            
+            },function(){
+             $(".about").slideUp();
+            }
+        );
+    });    
+    
+    // scroll-to-top
+    $(".scroll-up").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "fast");
+      return false;
+    });
+    
+</script>
+</body>    
+    
+</html>
