@@ -1,5 +1,5 @@
 # yakunoteProject
-test used to demonstrate responsiveness and jQuery
+test site used to demonstrate responsiveness and jQuery
 
 ![alt tab](http://gyazo.com/ab28a756d7d99d831af9168defbcb1de.png "screenshot 01")
 
